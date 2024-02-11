@@ -43,12 +43,11 @@ helm repo update eks
 Install
 
 ```
-helm install aws-load-balancer-controller eks/aws-load-balancer-controller \            
-  -n kube-system \
+helm install aws-load-balancer-controller eks/aws-load-balancer-controller -n kube-system \
   --set clusterName=robot-shop \
   --set serviceAccount.create=false \
   --set serviceAccount.name=aws-load-balancer-controller \
-  --set region=<us-east-1 \
+  --set region=us-east-1 \
   --set vpcId=vpc-0bf60b3528de75c02 
 ```
 
