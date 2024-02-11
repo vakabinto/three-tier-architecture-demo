@@ -18,7 +18,7 @@ eksctl create iamserviceaccount \
 Run the following command. Replace <AWS-ACCOUNT-ID> with the name of your cluster, <AWS-ACCOUNT-ID> with your account ID.
 
 ```
-eksctl create addon --name aws-ebs-csi-driver --cluster <YOUR-CLUSTER-NAME> --service-account-role-arn arn:aws:iam::<AWS-ACCOUNT-ID>:role/AmazonEKS_EBS_CSI_DriverRole --force
+eksctl create addon --name aws-ebs-csi-driver --cluster robot-shop --service-account-role-arn arn:aws:iam::659895084332:role/AmazonEKS_EBS_CSI_DriverRole --force
 ```
 
 **Note**: If your cluster is in the AWS GovCloud (US-East) or AWS GovCloud (US-West) AWS Regions, then replace arn:aws: with arn:aws-us-gov:.
