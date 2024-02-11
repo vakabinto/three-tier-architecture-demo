@@ -18,7 +18,7 @@ Create IAM Role
 
 ```
 eksctl create iamserviceaccount \
-  --cluster=<your-cluster-name> \
+  --cluster=robot-shop\
   --namespace=kube-system \
   --name=aws-load-balancer-controller \
   --role-name AmazonEKSLoadBalancerControllerRole \
@@ -45,11 +45,11 @@ Install
 ```
 helm install aws-load-balancer-controller eks/aws-load-balancer-controller \            
   -n kube-system \
-  --set clusterName=<your-cluster-name> \
+  --set clusterName=robot-shop \
   --set serviceAccount.create=false \
   --set serviceAccount.name=aws-load-balancer-controller \
-  --set region=<region> \
-  --set vpcId=<your-vpc-id>
+  --set region=<us-east-1 \
+  --set vpcId=vpc-0bf60b3528de75c02 
 ```
 
 Verify that the deployments are running.
